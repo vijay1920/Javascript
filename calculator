@@ -1,1 +1,99 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <title>Calculator using JS</title>
+<style>
+.hero
+{
+width:195px;
+height:400px;
+padding: 0 15px;
+border: 3px solid black;
+border-radius: 15px;
+margin-left: 40%;
+margin-top: 10%;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+background-color: #d4d4d4;
+}
+h3
+{
+text-align: center;
+
+}
+
+.btn
+{
+width: 180px;
+padding: 5px 5px;
+background-color: black;
+color: white;
+justify-content: center;
+border-radius: 5px;
+}
+#print
+{
+ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+background-color: lightgreen;
+}
+input
+{
+margin-top: 4px;
+background-color:white;
+border-radius: 20px;
+padding: 5px 15px;
+color: black;
+}
+
+input:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+
+</style>
+</head>
+<body>
+<div class="hero">
+<h3>Simple calculator using javascrpit</h3>
+<div class= "form">
+<form name="form1">
+<input type="text" id="print">
+<br><br>
+<div  class="btn">
+<input type="button" value=1  onclick="form1.print.value=form1.print.value+1">
+<input type="button" value=2  onclick="form1.print.value=form1.print.value+2">
+<input type="button" value=3  onclick="form1.print.value=form1.print.value+3">
+<input type="button" value=+  onclick="form1.print.value=form1.print.value+'+'">
+<br><br>
+
+<input type="button" value=4  onclick="form1.print.value=form1.print.value+4">
+<input type="button" value=5   onclick="form1.print.value=form1.print.value+5">
+<input type="button" value=6   onclick="form1.print.value=form1.print.value+6">
+<input type="button" value=-  onclick="form1.print.value=form1.print.value+'-'">
+<br><br>
+
+<input type="button" value=7  onclick="form1.print.value=form1.print.value+7">
+<input type="button" value=8   onclick="form1.print.value=form1.print.value+8">
+<input type="button" value=9  onclick="form1.print.value=form1.print.value+9">
+<input type="button" value=*  onclick="form1.print.value=form1.print.value+'*'">
+<br><br>
+
+<input type="button" value=0  onclick="form1.print.value=form1.print.value+0">
+<input type="button" value=.   onclick="form1.print.value=form1.print.value+'.'">
+<input type="button" value=/  onclick="form1.print.value=form1.print.value+'/'">
+<input type="button" value='='  onclick="form1.print.value=eval(form1.print.value)">
+<br><br>
+</div>
+
+<div  class="btn-row5">
+<input type="button" value=clear all  onclick="form1.print.value=' '">
+<br><br>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
+
 
