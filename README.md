@@ -36,6 +36,9 @@ Boolean
 Variable
 
 
+Dynamically typed language
+
+
 Methods: Set of instructions
 
 prompt()-------> prompt box-----> input
