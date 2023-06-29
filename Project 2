@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>City Stats</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Select a city</h2>
+        <div class="inputdiv">
+            <select id="input">
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" >Show stats</button>
+        </div>
+        
+        
+    </div>
+    <script>
+
+
+const button = document.querySelector('button')
+let resultdiv = document.createElement('div')
+resultdiv.id = 'result'
+document.getElementById('wrapper').appendChild(resultdiv)
+
+//event listener
+button.addEventListener('click',displayStats)
+function displayStats(){
+    
+    const input = document.getElementById("input")
+    const city = input.options[input.selectedIndex].value
+    let population = 0, literacyRate = 0, language =''
+    switch(city){
+        case 'Bengaluru':
+            population = 8443675
+            literacyRate = 88.71
+            language = 'Kannada'
+            break
+        case 'Chennai':
+            population = 4646732
+            literacyRate = 90.20
+            language = 'Tamil'
+            break
+        case 'Mumbai':
+            population = 12442373
+            literacyRate = 89.73
+            language = 'Marathi'
+            break
+        case 'Delhi':
+            population = 16787941
+            literacyRate = 86.20
+            language = 'Hindi'
+            break
+
+    }
+    let text = `The Indian city of ${city} has a population of ${population}. Language spoken is ${language} and literacy rate is ${literacyRate}%.`
+    console.log(text)
+    
+    document.getElementById('result').innerHTML = text
+
+}
+    </script>
+</body>
+</html>
